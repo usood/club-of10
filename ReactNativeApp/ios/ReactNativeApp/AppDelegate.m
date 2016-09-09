@@ -11,12 +11,14 @@
 
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
+@import Firebase;
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
+  [FIRApp configure];
   for (NSString* family in [UIFont familyNames])
   {
     NSLog(@"%@", family);
